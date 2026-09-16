@@ -10,7 +10,7 @@ function esPrimo(numero) {
 
 function comprobarPrimo() {
   //Cojo el valor del input.
-  const inputValue = Number.parseInt(document.getElementById("idInput"));
+  const inputValue = Number.parseInt(document.getElementById("idInput").value);
   //Cojo el elemento div donde guardaremos el resultado.
   const contenedor = document.getElementById("idContenedor");
   //Asigno por defecto que sea primo
