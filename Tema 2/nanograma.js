@@ -1,2 +1,2 @@
-let variable = document.getElementById("xd");
+let variable = xd.getElementById("dumbo");
 console.log("No se hacerlo profe :/");
