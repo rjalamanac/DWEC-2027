@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form action="" method="get">
+          <label
+            >Importe <input id="idImporte" type="number" placeholder="20"
+          /></label>
+          <label
+            >De:
+            <select id="divisa-origen">
+              <option value="">--Please choose an option--</option>
+              <option value="Euros">Euros</option>
+              <option value="Dollars">Dollars</option>
+              <option value="Libras">Libras</option>
+            </select>
+          </label>
+          <img src="arrow.png" alt="Flechas de cambio de divisa" />
+          <label
+            >a
+            <select id="divisa-fin">
+              <option value="">--Please choose an option--</option>
+              <option value="Euros">Euros</option>
+              <option value="Dollars">Dollars</option>
+              <option value="Libras">Libras</option>
+            </select>
+          </label>
+          <input type="submit" value="Cambiar" />
+        </form>
+      </section>
+
+      <section>
+        <h1>Histórico</h1>
+        <ul id="idHistorico"></ul>
+      </section>
+    </main>
+  </body>
+</html>
