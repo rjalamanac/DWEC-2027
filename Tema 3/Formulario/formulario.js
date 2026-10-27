@@ -1,4 +1,8 @@
-document.addEventListener("submit", function (event) {
+const form = document.getElementById("idForm");
+
+form.addEventListener("submit", onSubmit);
+
+function onSubmit(event) {
   event.preventDefault();
   const nombre = document.getElementById("idNombre").value;
   const apellido = document.getElementById("idApellido").value;
@@ -14,4 +18,16 @@ document.addEventListener("submit", function (event) {
     correo: correo,
   };
   sessionStorage.setItem("UsuarioAnterior", JSON.stringify(persona));
-});
+}
+
+const button = document.getElementById("idButton");
+
+button.addEventListener("click", btnSumarUno);
+
+function btnSumarUno(event) {
+  const spanClicks = document.getElementById("idNumclicks");
+  let numeroClicks = Number.parseInt(spanClicks.textContent);
+  numeroClicks++;
+  spanClicks.textContent = numeroClicks;
+  spanClicks.FRANCISCO = numeroClicks;
+}
