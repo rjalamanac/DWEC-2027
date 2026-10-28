@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="cambioDivisa.js" defer></script>
+    <script type="module" src="constantes.js" defer></script>
   </head>
   <body>
     <main>
       <section>
         <form action="" method="get">
           <label
-            >Importe <input id="idImporte" type="number" placeholder="20"
+            >Importe <input id="idImporte" type="number" value="20"
           /></label>
           <label
             >De:
             <select id="divisa-origen">
-              <option value="">--Please choose an option--</option>
+              <option value="" selected>--Please choose an option--</option>
               <option value="Euros">Euros</option>
               <option value="Dollars">Dollars</option>
               <option value="Libras">Libras</option>
@@ -24,9 +26,9 @@
           </label>
           <img src="arrow.png" alt="Flechas de cambio de divisa" />
           <label
-            >a
+            >A:
             <select id="divisa-fin">
-              <option value="">--Please choose an option--</option>
+              <option value="" selected>--Please choose an option--</option>
               <option value="Euros">Euros</option>
               <option value="Dollars">Dollars</option>
               <option value="Libras">Libras</option>
