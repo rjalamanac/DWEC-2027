@@ -8,6 +8,8 @@ class Person {
     this.country = country;
   }
 
+  static planeta = "La Tierra";
+
   printDetails() {
     console.log(`Hi! My details are:
         Name: ${this.firstName},
@@ -18,3 +20,4 @@ class Person {
 
 const samuel = new Person("Samuel", "L Jackson", 59, "Actor", "America");
 samuel.printDetails();
+console.log(Person.planeta);

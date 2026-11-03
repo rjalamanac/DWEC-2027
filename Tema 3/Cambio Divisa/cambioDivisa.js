@@ -1,9 +1,12 @@
-import { DOLLARS, EUROS, LIBRAS } from "./constantes.js";
-import { exchangeDivisa } from "./exchanger.js";
+import { DivisaExchanger } from "./exchanger.js";
+import { HistoricWriter } from "./historicWriter.js";
+
 document.addEventListener("submit", cambioDivisa);
 
 function cambioDivisa(event) {
   event.preventDefault();
+  const exchanger = new DivisaExchanger();
+  const historicWriter = new HistoricWriter();
 
   //idImporte
   const importe = Number.parseInt(document.getElementById("idImporte").value);
@@ -27,10 +30,10 @@ function cambioDivisa(event) {
     return;
   }
 
-  const resultado = exchangeDivisa(valorDivisaOrigen, valorDivisaEnd, importe);
-  const nuevoElementoLista = document.createElement("li");
-  const fechaActual = new Date(Date.now());
-  const resultadoString = `${fechaActual.getDate()}/${fechaActual.getMonth() + 1}/${fechaActual.getFullYear()} ${fechaActual.getHours()}:${fechaActual.getMinutes()} Importe ${importe} ${valorDivisaOrigen} - ${resultado.toFixed(2)}`;
-  nuevoElementoLista.textContent = resultadoString;
-  document.getElementById("idHistorico").appendChild(nuevoElementoLista);
+  const resultado = exchanger.exchangeDivisa(
+    valorDivisaOrigen,
+    valorDivisaEnd,
+    importe,
+  );
+  historicWriter.writeNewLine(document, importe, valorDivisaOrigen, resultado);
 }
