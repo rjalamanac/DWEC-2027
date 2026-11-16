@@ -1,4 +1,4 @@
-class HistoricWriter {
+class FacadeHistoricWriter {
   static instance = null;
   constructor() {
     if (HistoricWriter.instance === null) {
@@ -16,4 +16,4 @@ class HistoricWriter {
   }
 }
 
-export { HistoricWriter };
+export { FacadeHistoricWriter };
