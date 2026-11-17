@@ -8,6 +8,14 @@ class TrafficLight {
   change() {
     this.state.handle(this);
   }
+
+  puedoPasar() {
+    if (typeof this.state === "Red") {
+      console.log("No primo");
+      return;
+    }
+    console.log("Si primo");
+  }
 }
 
 class Red {
@@ -30,6 +38,10 @@ class Yellow {
 }
 
 const light = new TrafficLight();
+light.puedoPasar();
 light.change();
+light.puedoPasar();
 light.change();
+light.puedoPasar();
 light.change();
+light.puedoPasar();

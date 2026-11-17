@@ -12,25 +12,26 @@ function div(x, y) {
   return x / y;
 }
 
-let Command = function (execute, value) {
+let Command = function (execute, value, opuesto) {
   this.execute = execute;
   this.value = value;
+  this.undo = opuesto;
 };
 
 let AddCommand = function (value) {
-  return new Command(add, value);
+  return new Command(add, value, sub);
 };
 
 let SubCommand = function (value) {
-  return new Command(sub, value);
+  return new Command(sub, value, add);
 };
 
 let MulCommand = function (value) {
-  return new Command(mul, value);
+  return new Command(mul, value, div);
 };
 
 let DivCommand = function (value) {
-  return new Command(div, value);
+  return new Command(div, value, mul);
 };
 
 let Calculator = function () {
