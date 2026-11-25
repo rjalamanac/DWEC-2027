@@ -137,7 +137,8 @@ header h1 {
   -webkit-background-clip: text;
 }
 
-button {
+button,
+img {
   position: absolute;
 }
 
@@ -216,4 +217,10 @@ button {
   100% {
     background-position: 0 0;
   }
+}
+
+.imgKefir {
+  width: 5vw;
+  height: auto;
+  object-fit: fill;
 }
